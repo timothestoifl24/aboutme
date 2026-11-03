@@ -32,7 +32,6 @@ sync_to_github:
     - git config --global user.email "ci@gitlab.local"
     - git remote remove github || true
     - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}
-    - git fetch --all
     - git log --oneline -n 5
     - git push -u origin main --force-with-lease
 
